@@ -162,12 +162,4 @@ The generated CSS is set up with automatic Bootstrap recompilation with variable
 Bootstrap v4 is installed using npm and customised by tweaking your variables in ``static/sass/custom_bootstrap_vars``.
 
 You can find a list of available variables `in the bootstrap source`_, or get explanations on them in the `Bootstrap docs`_.
-
-{% if cookiecutter.js_task_runner == 'Gulp' %}
-Bootstrap's javascript as well as its dependencies is concatenated into a single file: ``static/js/vendors.js``.
-{% endif %}
-
-.. _in the bootstrap source: https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
-.. _Bootstrap docs: https://getbootstrap.com/docs/4.1/getting-started/theming/
-
 {% endif %}
