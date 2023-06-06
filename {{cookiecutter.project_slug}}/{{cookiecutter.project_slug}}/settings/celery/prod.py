@@ -5,8 +5,12 @@ import os
 # from datetime import timedelta
 
 
-url_key = os.environ[ '{{ cookiecutter.project_slug|upper }}__RABBITMQ__KEY__URL' ]
-celery_url = os.environ[ url_key ]
+user = os.environ[ '{{ cookiecutter.project_slug|upper }}__RABBITMQ__USER' ]
+password = os.environ[ '{{ cookiecutter.project_slug|upper }}__RABBITMQ__PASSWORD' ]
+vhost = os.environ[ '{{ cookiecutter.project_slug|upper }}__RABBITMQ__VHOST' ]
+port = os.environ[ '{{ cookiecutter.project_slug|upper }}__RABBITMQ__PORT' ]
+domain = os.environ[ '{{ cookiecutter.project_slug|upper }}__RABBITMQ__DOMAIN' ]
+celery_url = f"amqp://{user}:{password}@{domain}:{port}/{vhost}"
 
 
 BROKER_URL = celery_url

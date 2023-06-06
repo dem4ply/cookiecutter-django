@@ -1,8 +1,6 @@
 import os
 
 
-os.environ[ '{{ cookiecutter.project_slug|upper }}__RABBITMQ__KEY__URL' ]
-
 #mysql
 DATABASES = {
     'default': {

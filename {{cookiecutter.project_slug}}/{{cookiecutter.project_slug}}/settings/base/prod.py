@@ -73,9 +73,11 @@ BASE_DIR = os.path.dirname( os.path.dirname( os.path.abspath( __file__ ) ) )
 
 STATIC_ROOT = os.path.join( BASE_DIR, 'staticfiles' )
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 AUTH_USER_MODEL = 'chibi_user.User'
+AUTH_GROUP_MODEL = 'chibi_user.Group'
+AUTH_PERMISSION_MODEL = 'chibi_user.Permission'
 
 SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 

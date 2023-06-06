@@ -1,30 +1,26 @@
-Django==2.1.5
-Sphinx==1.8.1
-django-cors-headers==2.4.0
-django-extensions==2.1.5
-djangorestframework==3.9.1
+Django==4.2.1
+django-cors-headers==4.0.0
+django-extensions==3.2.1
+djangorestframework==3.14.0
 
-django-filter==2.1.0
-django-filters==0.2.1
-#chibi_django==0.1.2
-#chibi==0.4.0.5
-django-mysql==2.4.1
-djangorestframework-xml==1.4.0
-djangorestframework-yaml==1.0.3
+django-filter==23.2
+chibi_django>=0.2.3
+chibi>=0.7.7
+django-mysql==4.9.0
+djangorestframework-xml==2.0.0
+djangorestframework-yaml==2.0.0
 drf-nested-routers==0.91
 dj-database-url==0.5.0
 CMRESHandler==1.0.0
-django-heroku==0.3.1
 elasticsearch_dsl==7.0.0
-djangorestframework-jwt==1.11.0
+djangorestframework-simplejwt==5.2.2
 
-celery==4.2.1
+celery==5.2.7
 
-#psycopg2==2.7.7
-mysqlclient==1.4.4
+mysqlclient==2.1.1
 
-gevent==1.4
-gunicorn==19.9
+gevent==22.10.2
+gunicorn==20.1.0
 setproctitle==1.1.10
 
 factory-boy==2.11.1
@@ -32,13 +28,21 @@ flake8==3.5.0
 pycodestyle==2.3
 coverage==4.5.2
 
-sphinx-intl==0.9.10
-sphinx-rtd-theme==0.2.4
-sphinxcontrib-httpdomain==1.6.0
-sphinxcontrib-plantuml==0.10
-# sphinxcontrib-spelling==4.0.1
+Sphinx
+sphinx-intl
+sphinx-rtd-theme
+sphinxcontrib-httpdomain
+sphinxcontrib-plantuml
+# sphinxcontrib-spelling
 
 
-vcrpy-unittest==0.1.7
+vcrpy-unittest
 
 ipython
+
+
+certifi
+
+
+#django_rest_marshmallow==4.0.1
+cryptography
