@@ -10,7 +10,7 @@ rest_envars = donkey.inflate(
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
         'chibi_user.authentication.Token_simple_authentication',
     ],
     'DEFAULT_PERMISSION_CLASSES': (
