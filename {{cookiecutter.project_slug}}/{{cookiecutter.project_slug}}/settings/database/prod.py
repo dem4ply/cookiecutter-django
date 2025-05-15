@@ -1,6 +1,5 @@
 import os
 
-
 #mysql
 DATABASES = {
     'default': {

@@ -3,6 +3,7 @@ import json
 from six.moves.urllib import request
 from cryptography.x509 import load_pem_x509_certificate
 from cryptography.hazmat.backends import default_backend
+from chibi.parser import to_bool
 
 
 env = os.environ.get( '{{ cookiecutter.project_slug|upper }}__ENVIRONMENT', 'local' ).lower()
@@ -10,7 +11,9 @@ env = os.environ.get( '{{ cookiecutter.project_slug|upper }}__ENVIRONMENT', 'loc
 is_production = env == 'production'
 
 PROJECT_NAME = '{{ cookiecutter.project_slug }}'
-TEST_MODE = bool( os.environ.get( '{{ cookiecutter.project_slug|upper }}__TEST_MODE', False ) )
+TEST_MODE = to_bool( os.environ.get( '{{ cookiecutter.project_slug|upper }}__TEST_MODE', False ) )
+
+print( 'TEST_MODE: {}'.format( TEST_MODE ) )
 
 SECRET_KEY = os.environ.get( '{{ cookiecutter.project_slug|upper }}__SECRET_KEY', '' )
 DEBUG = not is_production

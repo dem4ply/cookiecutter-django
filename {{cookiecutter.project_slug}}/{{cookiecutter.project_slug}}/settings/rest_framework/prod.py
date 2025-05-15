@@ -4,9 +4,11 @@ import chibi_donkey as donkey
 from chibi.snippet.dict import get_regex, lower_keys
 
 
-rest_envars = donkey.inflate(
-    lower_keys( get_regex(
-        os.environ, r'{{ cookiecutter.project_slug|upper }}__REST__.+' ) ) )[ '{{ cookiecutter.project_slug }}' ][ 'rest' ]
+rest_envars = (
+    donkey.inflate( lower_keys( get_regex(
+        os.environ, r'{{ cookiecutter.project_slug|upper }}__REST__.+' ) )
+    )[ '{{ cookiecutter.project_slug }}' ][ 'rest' ]
+)
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
