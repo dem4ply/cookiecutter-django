@@ -81,7 +81,6 @@ celerybeat-schedule
 *.sage.py
 
 # dotenv
-.env
 
 # virtualenv
 .venv
@@ -106,6 +105,8 @@ ENV/
 
 *.db
 .vagrant
+
+**/cassettes/
 
 # shit of vim
 .*.swo

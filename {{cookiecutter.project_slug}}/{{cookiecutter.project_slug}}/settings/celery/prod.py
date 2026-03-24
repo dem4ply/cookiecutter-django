@@ -1,5 +1,8 @@
 import os
 
+
+from kombu import Exchange, Queue
+
 # from kombu import Exchange, Queue
 # from celery.schedules import crontab
 # from datetime import timedelta
